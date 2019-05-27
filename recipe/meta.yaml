@@ -13,7 +13,7 @@ build:
   number: 1
   skip: True  # [not linux]
   run_exports:
-    - {{ pin_subpackage('libssh', max_pin='x.x.x') }} {{ build_pin }}
+    - {{ pin_subpackage('libssh2') }}
 
 requirements:
   build:
