@@ -10,8 +10,10 @@ source:
   sha256: 43304ca22f0ba0b654e14b574a39816bc70212fdea5858a6637cc26cade3d592
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux]
+  run_exports:
+    - {{ pin_subpackage('libssh', max_pin='x.x.x') }} {{ build_pin }}
 
 requirements:
   build:
