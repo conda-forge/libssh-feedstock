@@ -1,5 +1,5 @@
 {% set name = "libssh" %}
-{% set version = "0.8.7" %}
+{% set version = "0.8.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://www.libssh.org/files/0.8/{{ name }}-{{ version }}.tar.xz
-  sha256: 43304ca22f0ba0b654e14b574a39816bc70212fdea5858a6637cc26cade3d592
+  sha256: 4b127fd736ac4df109ae7368f44201a2d0b989e0c89132dd92290593535d65e2
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not linux]
   run_exports:
     - {{ pin_subpackage('libssh') }}
