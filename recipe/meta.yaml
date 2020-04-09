@@ -1,5 +1,5 @@
 {% set name = "libssh" %}
-{% set version = "0.8.8" %}
+{% set version = "0.8.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://www.libssh.org/files/0.8/{{ name }}-{{ version }}.tar.xz
-  sha256: 4b127fd736ac4df109ae7368f44201a2d0b989e0c89132dd92290593535d65e2
+  sha256: 8559e19da0c40b6f93482b6160219ad77a4d9f1dc190bf174757455c6ae26825
 
 build:
-  number: 1
-  skip: True  # [not unix]
+  number: 0
+  skip: true  # [not unix]
   run_exports:
     - {{ pin_subpackage('libssh') }}
 
@@ -33,7 +33,7 @@ about:
   license: LGPL-2.1
   license_family: GPL
   license_file: COPYING
-  summary: 'libssh - The SSH library'
+  summary: libssh - The SSH library
 
   description: |
     libssh is a multiplatform C library implementing the SSHv2 protocol 
