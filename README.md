@@ -3,7 +3,7 @@ About libssh
 
 Home: https://libssh.org
 
-Package license: LGPL 2.1
+Package license: LGPL-2.1
 
 Feedstock license: BSD 3-Clause
 
