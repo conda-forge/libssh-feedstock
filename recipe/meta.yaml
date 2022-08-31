@@ -1,16 +1,16 @@
 {% set name = "libssh" %}
-{% set version = "0.8.9" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://www.libssh.org/files/0.8/{{ name }}-{{ version }}.tar.xz
-  sha256: 8559e19da0c40b6f93482b6160219ad77a4d9f1dc190bf174757455c6ae26825
+  url: https://www.libssh.org/files/0.10/{{ name }}-{{ version }}.tar.xz
+  sha256: da2b3337a0dd1d1e3788376ee471548520cad91a4f3f23ea3f50c5a73a7e69a5
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not unix]
   run_exports:
     - {{ pin_subpackage('libssh') }}
@@ -27,6 +27,9 @@ requirements:
 
 test:
   commands:
+    - test -f $PREFIX/include/libssh/libssh.h
+    - test -f $PREFIX/lib/pkgconfig/libssh.pc
+    - test -f $PREFIX/lib/libssh$SHLIB_EXT
 
 about:
   home: https://libssh.org
