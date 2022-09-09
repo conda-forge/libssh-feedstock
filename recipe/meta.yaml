@@ -10,10 +10,13 @@ source:
   sha256: 07392c54ab61476288d1c1f0a7c557b50211797ad00c34c3af2bbc4dbc4bd97d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not unix]
   run_exports:
-    - {{ pin_subpackage('libssh') }}
+    # We pin to a minor version due to an incompatibility 
+    # between 0.8 and 0.10
+    # https://abi-laboratory.pro/index.php?view=timeline&l=libssh
+    - {{ pin_subpackage('libssh', max_pin='x.x') }}
 
 requirements:
   build:
