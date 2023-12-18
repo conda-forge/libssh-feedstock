@@ -10,7 +10,7 @@ source:
   sha256: 1861d498f5b6f1741b6abc73e608478491edcf9c9d4b6630eef6e74596de9dc1
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not unix]
   run_exports:
     # We pin to a minor version due to an incompatibility 
