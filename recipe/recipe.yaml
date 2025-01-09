@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://www.libssh.org/files/0.10/${{ name }}-${{ version }}.tar.xz
+  url: https://www.libssh.org/files/${{ (version | split("."))[:2] | join(".") }}/${{ name }}-${{ version }}.tar.xz
   sha256: 1861d498f5b6f1741b6abc73e608478491edcf9c9d4b6630eef6e74596de9dc1
 
 build:
