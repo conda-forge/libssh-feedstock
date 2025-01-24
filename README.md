@@ -3,13 +3,11 @@ About libssh-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libssh-feedstock/blob/main/LICENSE.txt)
 
-Home: https://libssh.org
+Home: https://libssh.org/
 
 Package license: LGPL-2.1-or-later
 
 Summary: libssh - The SSH library
-
-Development: https://www.libssh.org/communication/
 
 Documentation: https://www.libssh.org/documentation/
 
@@ -17,7 +15,6 @@ libssh is a multiplatform C library implementing the SSHv2 protocol
 on client and server side. With libssh, you can remotely execute
 programs, transfer files, use a secure and transparent tunnel,
 manage public keys and much more ...
-
 
 Current build status
 ====================
