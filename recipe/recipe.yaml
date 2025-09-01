@@ -34,12 +34,15 @@ requirements:
 
 tests:
   - script:
-      - test -f $PREFIX/include/libssh/libssh.h   # [unix]
-      - test -f $PREFIX/lib/pkgconfig/libssh.pc   # [unix]
-      - test -f $PREFIX/lib/libssh$SHLIB_EXT      # [unix]
-      - if not exist %LIBRARY_INC%\libssh\libssh.h exit 1  # [win]
-      - if not exist %LIBRARY_LIB%\libssh.lib exit 1       # [win]
-      - if not exist %LIBRARY_BIN%\libssh.dll exit 1       # [win]
+      - if: unix
+        then:
+          - test -f $PREFIX/include/libssh/libssh.h
+          - test -f $PREFIX/lib/pkgconfig/libssh.pc
+          - test -f $PREFIX/lib/libssh$SHLIB_EXT
+        else:
+          - if not exist %LIBRARY_INC%\libssh\libssh.h exit 1
+          - if not exist %LIBRARY_LIB%\libssh.lib exit 1 
+          - if not exist %LIBRARY_BIN%\libssh.dll exit 1
 
 about:
   homepage: https://libssh.org
