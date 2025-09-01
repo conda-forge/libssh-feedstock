@@ -41,8 +41,8 @@ tests:
           - test -f $PREFIX/lib/libssh$SHLIB_EXT
         else:
           - if not exist %LIBRARY_INC%\libssh\libssh.h exit 1
-          - if not exist %LIBRARY_LIB%\libssh.lib exit 1 
-          - if not exist %LIBRARY_BIN%\libssh.dll exit 1
+          - if not exist %LIBRARY_LIB%\ssh.lib exit 1 
+          - if not exist %LIBRARY_BIN%\ssh.dll exit 1
 
 about:
   homepage: https://libssh.org
